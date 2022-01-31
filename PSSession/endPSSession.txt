@@ -7,3 +7,13 @@
 > Remove-PSSession -name <session_name>
 
 #### dont use Disconnect-PSSession -name <session_name>
+####
+#### How to get mailbox info? Look for first 10 lines of response!
+
+> Get-Mailbox -identity "Full Name" | Format-list
+
+#### How to set up saving messages to "Sent" folder:
+
+> Set-Mailbox "Full Name" -MessageCopyForSentAsEnabled $True
+> Set-Mailbox "Full Name" -MessageCopyForSendOnBehalfEnabled $True
+
